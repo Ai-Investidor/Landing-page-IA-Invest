@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Carteira IA Invest — Recomendações de investimento por inteligência artificial</title>
+<meta name="description" content="Carteira de investimentos revisada todo mês pela IA Invest. Recomendações claras de compra, manutenção e venda. Foco em dividendos e crescimento de patrimônio. R$497/ano ou 12x." />
+<meta property="og:title" content="Carteira IA Invest — Invista com estratégia, sem acompanhar o mercado" />
+<meta property="og:description" content="Todo mês, a IA Invest entrega uma carteira pronta: o que comprar, manter e vender, e em qual percentual. Foco em dividendos e patrimônio." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <script type="module" src="/src/main.js"></script>
+</head>
+<body id="top">
+
+<!-- Inline logo symbol (recolorável) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="ai-logo" viewBox="0 0 1785 408">
+    <path d="M782.921 1.5L648.417 406.5H515.579L650.083 1.5H782.921Z" fill="none" stroke="currentColor" stroke-width="3"/>
+    <path d="M745.921 1.5L611.417 406.5H478.579L613.083 1.5H745.921Z" fill="none" stroke="currentColor" stroke-width="3"/>
+    <path d="M703.421 1.5L568.917 406.5H436.079L570.583 1.5H703.421Z" fill="none" stroke="currentColor" stroke-width="3"/>
+    <path d="M408 408H272L362 136H226L136 408H0L135 0H543L408 408Z" fill="currentColor"/>
+    <path d="M678.5 0H814.5L679 408H543L678.5 0Z" fill="currentColor"/>
+    <path d="M951.64 271V133.88H985.24V271H951.64ZM1013.59 271V133.88H1045.59L1126.87 224.12V133.88H1160.79V271H1127.51L1047.35 182.04V271H1013.59ZM1241.01 271L1182.45 133.88H1217.81L1257.97 227.96L1298.13 133.88H1333.49L1274.93 271H1241.01ZM1356.87 270.84V133.88H1464.23V160.76H1390.31V188.76H1447.75V215.64H1390.31V243.96H1464.23V270.84H1356.87ZM1555.41 274.84C1532.37 274.84 1514.4 270.093 1501.49 260.6C1488.58 251.107 1482.13 237.613 1482.13 220.12V213.08H1515.73V220.12C1515.73 230.147 1518.93 237.293 1525.33 241.56C1531.73 245.827 1541.76 247.96 1555.41 247.96C1564.58 247.96 1572.05 247.427 1577.81 246.36C1586.66 244.76 1592 242.2 1593.81 238.68C1594.56 237.187 1594.93 234.573 1594.93 230.84V227.8C1594.72 226.52 1594.5 225.667 1594.29 225.24C1593.65 223.96 1591.94 222.68 1589.17 221.4C1587.04 220.333 1584.37 219.373 1581.17 218.52C1576.58 217.027 1570.77 215.64 1563.73 214.36C1560.32 213.72 1554.18 212.707 1545.33 211.32C1532.74 209.08 1525.06 207.64 1522.29 207C1514.29 205.293 1507.57 203.107 1502.13 200.44C1488.8 194.04 1482.13 183.64 1482.13 169.24C1482.13 163.693 1483.09 158.787 1485.01 154.52C1487.04 150.253 1489.86 146.733 1493.49 143.96C1497.22 141.08 1501.28 138.68 1505.65 136.76C1510.13 134.84 1515.25 133.4 1521.01 132.44C1526.88 131.48 1532.42 130.84 1537.65 130.52C1542.98 130.093 1548.74 129.88 1554.93 129.88C1562.72 129.88 1569.97 130.307 1576.69 131.16C1583.52 131.907 1590.13 133.347 1596.53 135.48C1603.04 137.507 1608.53 140.173 1613.01 143.48C1617.6 146.68 1621.22 150.893 1623.89 156.12C1626.66 161.24 1628.05 167.107 1628.05 173.72V180.76H1594.61V173.72C1594.61 166.893 1590.4 162.2 1581.97 159.64C1575.89 157.827 1566.88 156.92 1554.93 156.92C1546.08 156.92 1539.04 157.24 1533.81 157.88C1525.06 158.947 1519.62 160.76 1517.49 163.32C1516.32 164.813 1515.73 166.787 1515.73 169.24C1515.73 172.44 1516.32 174.68 1517.49 175.96C1518.24 176.707 1520.05 177.613 1522.93 178.68C1523.78 179 1524.69 179.32 1525.65 179.64C1526.61 179.853 1527.57 180.067 1528.53 180.28C1529.6 180.493 1530.29 180.653 1530.61 180.76C1534.88 181.827 1542.24 183.267 1552.69 185.08C1563.25 186.893 1570.29 188.12 1573.81 188.76C1593.65 192.813 1607.14 197.4 1614.29 202.52C1619.73 206.573 1623.46 211 1625.49 215.8C1627.52 220.493 1628.53 225.933 1628.53 232.12C1628.53 260.6 1604.16 274.84 1555.41 274.84ZM1695.06 271V160.76H1646.42V133.56H1777.14V160.76H1728.5V271H1695.06Z" fill="currentColor"/>
+  </symbol>
+</svg>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="container">
+    <a href="#top" class="brand-logo" aria-label="AI Invest"><svg viewBox="0 0 1785 408"><use href="#ai-logo"/></svg></a>
+    <div class="nav-links">
+      <a href="#problema">Por que</a>
+      <a href="#carteira">A carteira</a>
+      <a href="#como">Como funciona</a>
+      <a href="#especialista">Especialista</a>
+      <a href="#preco">Preço</a>
+      <a href="#faq">Dúvidas</a>
+    </div>
+    <div class="nav-cta">
+      <a href="#preco" class="btn btn-primary">Quero a carteira</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-bg">
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+  </div>
+  <div class="container">
+    <div class="hero-text">
+      <span class="hero-badge reveal"><span class="dot"></span> Carteira recomendada por inteligência artificial</span>
+      <h1 class="reveal">A carteira certa pra você. <em>Revisada todo mês.</em></h1>
+      <p class="lead reveal">Você não precisa escolher ação sozinho nem acompanhar o mercado todo dia. A IA Invest entrega uma carteira pronta — o que comprar, manter e vender, e quanto colocar em cada ativo. Foco em <strong>dividendos</strong> e <strong>crescimento de patrimônio</strong>.</p>
+      <div class="hero-actions reveal">
+        <a href="#preco" class="btn btn-primary">Quero minha carteira <i class="bi bi-arrow-right arrow"></i></a>
+        <a href="#carteira" class="btn btn-ghost">Ver como funciona</a>
+      </div>
+      <div class="hero-trust reveal">
+        <span><i class="bi bi-arrow-repeat"></i> Atualizada todo mês</span>
+        <span><i class="bi bi-cash-coin"></i> Foco em dividendos</span>
+        <span><i class="bi bi-shield-check"></i> Diversificação inteligente</span>
+      </div>
+    </div>
+
+    <!-- Portfolio glass card -->
+    <div class="dash glass reveal" id="carteira">
+      <div class="dash-head">
+        <div class="t"><i class="bi bi-pie-chart-fill lime"></i> Carteira IA Invest</div>
+        <span class="live"><span class="dot"></span> Junho 2025</span>
+      </div>
+      <div class="dash-sub">Recomendações do mês · comprar · manter · vender</div>
+
+      <div class="asset-row">
+        <div class="asset-id">
+          <div class="asset-ic">TD</div>
+          <div><div class="asset-name">Tesouro IPCA+ 2035</div><div class="asset-cls">Renda fixa</div></div>
+        </div>
+        <div class="asset-right"><span class="rec rec-buy">Comprar</span><span class="asset-pct">22%</span></div>
+      </div>
+
+      <div class="asset-row">
+        <div class="asset-id">
+          <div class="asset-ic">MX</div>
+          <div><div class="asset-name">MXRF11</div><div class="asset-cls">FII · Papel</div></div>
+        </div>
+        <div class="asset-right"><span class="rec rec-hold">Manter</span><span class="asset-pct">16%</span></div>
+      </div>
+
+      <div class="asset-row">
+        <div class="asset-id">
+          <div class="asset-ic">PE</div>
+          <div><div class="asset-name">PETR4</div><div class="asset-cls">Ação · Dividendos</div></div>
+        </div>
+        <div class="asset-right"><span class="rec rec-buy">Comprar</span><span class="asset-pct">14%</span></div>
+      </div>
+
+      <div class="asset-row">
+        <div class="asset-id">
+          <div class="asset-ic">HG</div>
+          <div><div class="asset-name">HGLG11</div><div class="asset-cls">FII · Logística</div></div>
+        </div>
+        <div class="asset-right"><span class="rec rec-buy">Comprar</span><span class="asset-pct">12%</span></div>
+      </div>
+
+      <div class="asset-row">
+        <div class="asset-id">
+          <div class="asset-ic">VA</div>
+          <div><div class="asset-name">VALE3</div><div class="asset-cls">Ação · Mineração</div></div>
+        </div>
+        <div class="asset-right"><span class="rec rec-hold">Manter</span><span class="asset-pct">11%</span></div>
+      </div>
+
+      <div class="asset-row">
+        <div class="asset-id">
+          <div class="asset-ic">CD</div>
+          <div><div class="asset-name">CDB 118% CDI</div><div class="asset-cls">Renda fixa · Liquidez</div></div>
+        </div>
+        <div class="asset-right"><span class="rec rec-buy">Comprar</span><span class="asset-pct">25%</span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-track">
+    <span class="ticker-item">Carteira atualizada todo mês</span>
+    <span class="ticker-item">Recomendações claras de compra e venda</span>
+    <span class="ticker-item">Foco em dividendos</span>
+    <span class="ticker-item">Crescimento de patrimônio</span>
+    <span class="ticker-item">Diversificação para reduzir riscos</span>
+    <span class="ticker-item">Análise por inteligência artificial</span>
+    <span class="ticker-item">Sem acompanhar o mercado todo dia</span>
+    <span class="ticker-item">Carteira atualizada todo mês</span>
+    <span class="ticker-item">Recomendações claras de compra e venda</span>
+    <span class="ticker-item">Foco em dividendos</span>
+    <span class="ticker-item">Crescimento de patrimônio</span>
+    <span class="ticker-item">Diversificação para reduzir riscos</span>
+    <span class="ticker-item">Análise por inteligência artificial</span>
+    <span class="ticker-item">Sem acompanhar o mercado todo dia</span>
+  </div>
+</div>
+
+<!-- PROBLEMA -->
+<section class="sec pain-sec" id="problema">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow">O problema</span>
+      <h2>Investir é fácil. Saber <em>onde</em> colocar o dinheiro, não.</h2>
+      <p>Quem quer investir bem não esbarra em falta de vontade — esbarra em falta de estratégia clara, atualizada e confiável.</p>
+    </div>
+    <div class="pain-grid">
+      <div class="pain glass reveal">
+        <div class="ic"><i class="bi bi-stack"></i></div>
+        <h3>Informação demais</h3>
+        <p>Centenas de ações, FIIs, cryptos e CDBs. Sem filtro, você gasta horas pesquisando e ainda fica na dúvida.</p>
+      </div>
+      <div class="pain glass reveal">
+        <div class="ic"><i class="bi bi-clock-history"></i></div>
+        <h3>Sem tempo pra acompanhar</h3>
+        <p>Trabalho, família, rotina. Ninguém tem como ficar de olho no mercado o dia inteiro. Quando você olha, o momento já passou.</p>
+      </div>
+      <div class="pain glass reveal">
+        <div class="ic"><i class="bi bi-emoji-frown"></i></div>
+        <h3>Medo de errar</h3>
+        <p>Comprar na alta, vender na baixa, concentrar tudo num ativo ruim. Sem estratégia, o erro custa caro.</p>
+      </div>
+      <div class="pain glass reveal">
+        <div class="ic"><i class="bi bi-piggy-bank"></i></div>
+        <h3>Dinheiro parado</h3>
+        <p>Muita gente deixa dinheiro na conta por não saber por onde começar. Isso tem um custo invisível: a inflação.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- O QUE VOCÊ RECEBE -->
+<section class="sec">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow">O que você recebe</span>
+      <h2>Uma estratégia organizada, <em>pronta pra executar</em>.</h2>
+      <p>A carteira já entrega tudo mastigado: ativos, percentuais e a decisão do mês. Você só executa na sua corretora.</p>
+    </div>
+    <div class="feat-grid">
+      <div class="fcard glass reveal">
+        <div class="n">01</div>
+        <div class="ic"><i class="bi bi-arrow-repeat"></i></div>
+        <h3>Revisão mensal</h3>
+        <p>Todo mês a carteira é revista conforme o cenário econômico, os resultados das empresas e as oportunidades do mercado.</p>
+      </div>
+      <div class="fcard glass reveal">
+        <div class="n">02</div>
+        <div class="ic"><i class="bi bi-check2-circle"></i></div>
+        <h3>Recomendações objetivas</h3>
+        <p>Comprar, manter ou vender — e em qual percentual. A decisão chega pronta, sem você precisar interpretar nada.</p>
+      </div>
+      <div class="fcard glass reveal">
+        <div class="n">03</div>
+        <div class="ic"><i class="bi bi-cash-coin"></i></div>
+        <h3>Renda recorrente</h3>
+        <p>A carteira prioriza bons pagadores de dividendos. Você recebe renda no bolso enquanto o patrimônio cresce.</p>
+      </div>
+      <div class="fcard glass reveal">
+        <div class="n">04</div>
+        <div class="ic"><i class="bi bi-diagram-3"></i></div>
+        <h3>Diversificação</h3>
+        <p>Ações, FIIs e renda fixa distribuídos de forma estratégica para reduzir risco sem abrir mão de bons retornos.</p>
+      </div>
+      <div class="fcard glass reveal">
+        <div class="n">05</div>
+        <div class="ic"><i class="bi bi-graph-up-arrow"></i></div>
+        <h3>Valorização no longo prazo</h3>
+        <p>Empresas sólidas e ativos com potencial de valorização, selecionados pra crescer junto com o seu patrimônio.</p>
+      </div>
+      <div class="fcard glass reveal">
+        <div class="n">06</div>
+        <div class="ic"><i class="bi bi-cpu"></i></div>
+        <h3>Análise por IA 24/7</h3>
+        <p>A IA monitora o mercado inteiro sem parar — do ativo volátil ao líquido. Nada relevante passa despercebido.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="sec steps-sec" id="como">
+  <div class="container">
+    <div class="sec-head center reveal">
+      <span class="eyebrow" style="justify-content:center">Como funciona</span>
+      <h2>Da assinatura ao <em>primeiro investimento</em>.</h2>
+    </div>
+    <div class="steps">
+      <div class="step glass reveal">
+        <div class="n">01</div>
+        <h3>Você assina</h3>
+        <p>Acesso imediato à carteira do mês — com todos os ativos, percentuais e recomendações já definidos.</p>
+      </div>
+      <div class="step glass reveal">
+        <div class="n">02</div>
+        <h3>A IA analisa</h3>
+        <p>Nossa IA varre o mercado inteiro e filtra as melhores oportunidades com base no cenário atual.</p>
+      </div>
+      <div class="step glass reveal">
+        <div class="n">03</div>
+        <h3>Você recebe</h3>
+        <p>Todo mês chega a carteira atualizada: o que comprar, manter e vender. Sem achismo, sem jargão.</p>
+      </div>
+      <div class="step glass reveal">
+        <div class="n">04</div>
+        <h3>O patrimônio cresce</h3>
+        <p>Você executa na sua corretora. Os dividendos chegam e, reinvestidos, aceleram o crescimento.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ESPECIALISTA -->
+<section class="sec" id="especialista">
+  <div class="container">
+    <div class="sec-head center reveal">
+      <span class="eyebrow" style="justify-content:center">Revisão humana</span>
+      <h2>Gerada por IA. <em>Revisada por um especialista.</em></h2>
+      <p>A inteligência artificial faz o trabalho pesado de análise. Mas, antes de chegar até você, cada carteira passa pelos olhos de um especialista certificado.</p>
+    </div>
+
+    <div class="expert-card glass reveal">
+      <div class="expert-photo">
+        <img class="ph" src="assets/matheus-miranda.jpg" alt="Matheus Miranda — especialista de investimentos da AI Invest"
+             onerror="this.outerHTML='&lt;div class=\'ph-fallback\'&gt;Foto: salve em assets/matheus-miranda.jpg&lt;/div&gt;'">
+        <div class="nm">Matheus Miranda</div>
+        <div class="rl">Especialista de Investimentos · AI Invest</div>
+        <div class="expert-badges">
+          <span class="ebadge"><i class="bi bi-patch-check-fill"></i> CEA · ANBIMA</span>
+          <span class="ebadge"><i class="bi bi-mortarboard-fill"></i> Economia</span>
+        </div>
+      </div>
+      <div class="expert-body">
+        <p class="quote"><span class="qt">Sou apaixonado por finanças, investimentos e análise econômica. Desde jovem desenvolvi afinidade pelos números, enxergando neles uma forma objetiva e consistente de compreender o mundo. Essa paixão me levou a cursar <strong>Economia</strong>, graduação que estou concluindo, e a buscar aperfeiçoamento constante — incluindo a conquista da <strong>certificação CEA</strong> e outras qualificações voltadas ao mercado financeiro.</span></p>
+        <div class="cert-row">
+          <img class="cert-thumb" src="assets/certificacao-cea-anbima.jpg" alt="Certificação CEA ANBIMA de Matheus Miranda Carneiro"
+               onerror="this.style.display='none'">
+          <div class="cert-meta">
+            <div class="ct"><i class="bi bi-patch-check-fill"></i> Certificação CEA — ANBIMA</div>
+            <div class="cs">Certificação de Especialista em Investimentos Anbima, emitida pela Associação Brasileira das Entidades dos Mercados Financeiro e de Capitais.</div>
+            <span class="cstatus"><span class="dot"></span> Certificação ativa</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EFEITO JUROS COMPOSTOS -->
+<section class="sec">
+  <div class="container">
+    <div class="split">
+      <div class="reveal">
+        <span class="eyebrow">O efeito no longo prazo</span>
+        <h2>Dividendos que <em>se multiplicam</em>.</h2>
+        <p class="intro">Cada dividendo recebido pode ser reinvestido pra comprar novos ativos. Mais ativos geram mais dividendos. É o efeito dos juros compostos trabalhando a seu favor — mês após mês, ano após ano.</p>
+        <div class="feat-list">
+          <div class="feat-li"><span class="ck"><i class="bi bi-check-lg"></i></span><div><b>Renda que cresce sozinha</b><span>Reinveste os proventos e aumenta a base que paga dividendos.</span></div></div>
+          <div class="feat-li"><span class="ck"><i class="bi bi-check-lg"></i></span><div><b>Patrimônio acelerado</b><span>O reinvestimento compõe o crescimento ao longo dos anos.</span></div></div>
+          <div class="feat-li"><span class="ck"><i class="bi bi-check-lg"></i></span><div><b>Dinheiro no seu bolso</b><span>Renda recorrente hoje, valorização amanhã. Os dois ao mesmo tempo.</span></div></div>
+        </div>
+      </div>
+      <div class="compound-card glass reveal">
+        <div class="cc-head">Crescimento ilustrativo do patrimônio</div>
+        <div class="cc-sub">Reinvestindo os dividendos · cenário hipotético</div>
+        <div class="cc-row"><span class="cc-yr">Ano 1</span><div class="cc-bar"><span style="width:16%"></span></div><span class="cc-val">+16%</span></div>
+        <div class="cc-row"><span class="cc-yr">Ano 2</span><div class="cc-bar"><span style="width:34%"></span></div><span class="cc-val">+35%</span></div>
+        <div class="cc-row"><span class="cc-yr">Ano 3</span><div class="cc-bar"><span style="width:55%"></span></div><span class="cc-val">+58%</span></div>
+        <div class="cc-row"><span class="cc-yr">Ano 4</span><div class="cc-bar"><span style="width:76%"></span></div><span class="cc-val">+89%</span></div>
+        <div class="cc-row"><span class="cc-yr">Ano 5</span><div class="cc-bar"><span style="width:100%"></span></div><span class="cc-val">+128%</span></div>
+        <p class="cc-note">Cenário hipotético para fins ilustrativos. Rentabilidade passada não garante rentabilidade futura. Investimentos envolvem risco.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PREÇO -->
+<section class="sec price-sec" id="preco">
+  <div class="container">
+    <div class="sec-head center reveal">
+      <span class="eyebrow" style="justify-content:center">Assinatura</span>
+      <h2>Um investimento que <em>se paga sozinho</em>.</h2>
+      <p>Menos que o custo de uma única consulta com assessor — com carteira revisada o ano inteiro.</p>
+    </div>
+
+    <div class="price-card glass reveal">
+      <div class="price-top">
+        <span class="price-flag">Plano anual</span>
+        <div class="price-name">Carteira IA Invest</div>
+        <div class="price-main">
+          <span class="price-cur">R$</span>
+          <span class="price-val">497</span>
+        </div>
+        <div class="price-per">por ano · acesso completo aos 12 meses</div>
+        <div class="price-or">ou <b>12x de R$&nbsp;41,41</b> — menos de R$42 por mês</div>
+      </div>
+      <div class="price-body">
+        <ul class="price-list">
+          <li><i class="bi bi-check-circle-fill ck"></i> Carteira revisada todos os meses</li>
+          <li><i class="bi bi-check-circle-fill ck"></i> Recomendações de compra, manutenção e venda</li>
+          <li><i class="bi bi-check-circle-fill ck"></i> Percentual sugerido para cada ativo</li>
+          <li><i class="bi bi-check-circle-fill ck"></i> Foco em geração de renda por dividendos</li>
+          <li><i class="bi bi-check-circle-fill ck"></i> Potencial de valorização no longo prazo</li>
+          <li><i class="bi bi-check-circle-fill ck"></i> Diversificação para reduzir riscos</li>
+          <li><i class="bi bi-check-circle-fill ck"></i> Análise de mercado por IA 24/7</li>
+          <li><i class="bi bi-check-circle-fill ck"></i> Acesso imediato após a assinatura</li>
+        </ul>
+        <a href="%VITE_PAYMENT_URL%" class="btn btn-primary btn-block">Assinar agora — R$&nbsp;497/ano <i class="bi bi-arrow-right arrow"></i></a>
+        <div class="price-foot"><i class="bi bi-shield-lock-fill"></i> Pagamento seguro · Acesso imediato · Garantia de 7 dias</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GARANTIA -->
+<section class="sec">
+  <div class="container">
+    <div class="guar glass reveal">
+      <div class="gic"><i class="bi bi-shield-check"></i></div>
+      <div class="guar-tx">
+        <h3>Garantia incondicional de 7 dias</h3>
+        <p>Se em até 7 dias você decidir que não é pra você, devolvemos 100% do valor pago. Sem perguntas, sem burocracia. O risco é todo nosso.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="faq">
+  <div class="container">
+    <div class="sec-head center reveal">
+      <span class="eyebrow" style="justify-content:center">Dúvidas frequentes</span>
+      <h2>Tudo o que você precisa saber.</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">Preciso entender de investimentos pra usar? <span class="faq-ic">+</span></button>
+        <div class="faq-a"><div class="faq-a-body">Não. A carteira foi feita exatamente pra quem não tem tempo nem conhecimento técnico. Você recebe as recomendações em linguagem direta — o que comprar, manter e vender. Basta ter conta numa corretora habilitada na B3.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">Qual valor mínimo pra começar? <span class="faq-ic">+</span></button>
+        <div class="faq-a"><div class="faq-a-body">A carteira funciona para diferentes tamanhos de patrimônio. Com cerca de R$1.000 já dá pra seguir as recomendações. Quanto maior o capital, maior o potencial de diversificação — mas você começa com o que tiver hoje.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">A IA Invest garante retorno? <span class="faq-ic">+</span></button>
+        <div class="faq-a"><div class="faq-a-body">Não — e desconfie de quem promete isso. Investimento em renda variável não tem retorno garantido. O que entregamos é uma análise estratégica baseada em dados pra aumentar suas chances de decisões melhores. Rentabilidade passada não garante rentabilidade futura.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">Com que frequência a carteira é atualizada? <span class="faq-ic">+</span></button>
+        <div class="faq-a"><div class="faq-a-body">Uma vez por mês. A IA analisa o cenário econômico, os resultados das empresas e as condições de mercado, e ajusta as recomendações. Você recebe a atualização no início de cada mês.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">Funciona com qualquer corretora? <span class="faq-ic">+</span></button>
+        <div class="faq-a"><div class="faq-a-body">Sim. Qualquer corretora habilitada na B3 serve — XP, Clear, Rico, Inter, BTG, Nubank, entre outras. A carteira é independente de corretora; você executa onde preferir.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">Como funciona o cancelamento? <span class="faq-ic">+</span></button>
+        <div class="faq-a"><div class="faq-a-body">Em até 7 dias após a compra: reembolso total, sem perguntas. Após esse prazo, a assinatura segue ativa até o fim dos 12 meses contratados.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="sec final">
+  <div class="container">
+    <h2 class="reveal">Sua carteira pronta. <em>Todo mês.</em></h2>
+    <p class="reveal">Pare de deixar dinheiro parado. Invista com estratégia definida por inteligência artificial — sem precisar acompanhar o mercado.</p>
+    <a href="#preco" class="btn btn-primary reveal" style="padding:18px 44px">Quero minha carteira agora <i class="bi bi-arrow-right arrow"></i></a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="foot-row">
+      <a href="#top" class="brand-logo" aria-label="AI Invest"><svg viewBox="0 0 1785 408"><use href="#ai-logo"/></svg></a>
+      <a href="https://www.instagram.com/aiinvest.oficial/" target="_blank" rel="noopener" class="foot-ig"><i class="bi bi-instagram"></i> @aiinvest.oficial</a>
+    </div>
+    <p class="foot-legal">
+      A AI Invest não é corretora de valores, banco ou gestora de recursos regulamentada pela CVM. As informações têm caráter educacional e analítico e não constituem recomendação personalizada de investimento nos termos da Resolução CVM 20/2021. Rentabilidade passada não é garantia de rentabilidade futura. Investimentos envolvem riscos e podem resultar em perda do capital investido. Invista de acordo com o seu perfil de risco.
+    </p>
+    <p class="foot-copy">© 2025 AI Invest · Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+
+</body>
+</html>
