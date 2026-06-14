@@ -1,0 +1,11 @@
+[[redirects]]
+  from = "/page"
+  to = "https://landing-page-ia-invest.netlify.app/page"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/page/*"
+  to = "https://landing-page-ia-invest.netlify.app/page/:splat"
+  status = 200
+  force = true
