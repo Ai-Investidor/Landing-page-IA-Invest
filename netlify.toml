@@ -1,11 +1,11 @@
-[[redirects]]
-  from = "/page"
-  to = "https://landing-page-ia-invest.netlify.app/page"
-  status = 200
-  force = true
+[build]
+  # Comando que o Netlify vai rodar para compilar seu projeto
+  command = "npm run build"
+  # Pasta que contém os arquivos finais minificados (HTML, CSS e JS)
+  publish = "dist"
 
+# Redirecionamento padrão para garantir o funcionamento do roteamento interno (se usar Vue Router, etc)
 [[redirects]]
-  from = "/page/*"
-  to = "https://landing-page-ia-invest.netlify.app/page/:splat"
+  from = "/*"
+  to = "/index.html"
   status = 200
-  force = true
