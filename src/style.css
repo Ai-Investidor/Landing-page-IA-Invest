@@ -143,6 +143,18 @@ h1,h2,h3,h4{font-family:var(--display);line-height:1.05;letter-spacing:-.02em;fo
 .step .n{font-family:var(--display);font-weight:800;font-size:2.8rem;color:rgba(225,255,6,.18);line-height:1;margin-bottom:18px;position:relative;z-index:2}
 .step h3{font-size:1.12rem;margin-bottom:10px;position:relative;z-index:2}
 .step p{color:var(--gray);font-size:.9rem;position:relative;z-index:2}
+.step h3 .wa{color:#25D366;margin-right:4px}
+
+/* Como você recebe — steps em 3 colunas + preview do relatório */
+.deliver-steps{grid-template-columns:repeat(3,1fr)}
+.deliver-preview{margin-top:56px;text-align:center}
+.dp-head{margin-bottom:30px}
+.dp-head h3{font-size:1.5rem;margin-top:8px}
+.dp-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:900px;margin:0 auto 30px;align-items:start}
+.dp-shot{margin:0;border-radius:14px;overflow:hidden;border:1px solid var(--line-strong);background:var(--bg-2);box-shadow:0 18px 50px rgba(0,0,0,.5);transition:transform .35s}
+.dp-shot:hover{transform:translateY(-6px)}
+.dp-shot img{display:block;width:100%;height:auto}
+.dp-note{color:var(--gray);font-size:.82rem;margin-top:16px}
 
 /* ---------- Split (compound) ---------- */
 .split{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
@@ -154,16 +166,33 @@ h1,h2,h3,h4{font-family:var(--display);line-height:1.05;letter-spacing:-.02em;fo
 .feat-li .ck{flex:none;width:26px;height:26px;border-radius:8px;background:rgba(225,255,6,.14);color:var(--lime);display:grid;place-items:center;font-size:.8rem;margin-top:2px}
 .feat-li b{font-family:var(--display);font-weight:600;font-size:.98rem}
 .feat-li span{display:block;color:var(--muted);font-size:.88rem;margin-top:2px}
-.compound-card{padding:34px}
+.cycle-card{padding:34px}
 .cc-head{font-family:var(--display);font-weight:600;font-size:.95rem;margin-bottom:6px}
-.cc-sub{font-size:.78rem;color:var(--muted);margin-bottom:26px}
-.cc-row{display:flex;align-items:center;gap:14px;padding:13px 0;border-top:1px solid var(--line)}
-.cc-row:first-of-type{border-top:none}
-.cc-yr{font-family:var(--display);font-weight:600;font-size:.8rem;color:var(--muted);width:48px;flex:none}
-.cc-bar{flex:1;height:8px;background:rgba(255,255,255,.06);border-radius:6px;overflow:hidden}
-.cc-bar span{display:block;height:100%;background:linear-gradient(90deg,var(--lime-dim),var(--lime));border-radius:6px}
-.cc-val{font-family:var(--display);font-weight:700;font-size:.95rem;color:var(--lime);width:60px;text-align:right;flex:none}
+.cc-sub{font-size:.78rem;color:var(--muted);margin-bottom:22px}
 .cc-note{font-size:.7rem;color:var(--muted);margin-top:18px;line-height:1.5}
+.cycle{display:flex;flex-direction:column}
+.cyc-step{display:flex;align-items:center;gap:15px;padding:15px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.02)}
+.cyc-ico{flex:none;width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-size:1.2rem;color:var(--lime);background:rgba(225,255,6,.08);border:1px solid rgba(225,255,6,.22)}
+.cyc-step b{display:block;font-size:.95rem;margin-bottom:2px}
+.cyc-step span{color:var(--gray);font-size:.82rem}
+.cyc-arrow{text-align:center;color:var(--lime-dim);font-size:1.05rem;line-height:1;padding:7px 0}
+.cyc-loop{margin-top:14px;display:flex;align-items:center;justify-content:center;gap:8px;font-family:var(--display);font-weight:600;font-size:.85rem;color:var(--lime);text-align:center;padding:13px;border:1px dashed rgba(225,255,6,.4);border-radius:12px;background:rgba(225,255,6,.04)}
+.cyc-loop i{font-size:1rem}
+.compound-trust{text-align:center;max-width:720px;margin:46px auto 0;padding-top:30px;border-top:1px solid var(--line);color:var(--gray);font-size:.95rem;line-height:1.65}
+.compound-trust strong{color:#fff;font-weight:600}
+
+/* Backtest da metodologia */
+.bt-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:30px}
+.bt-stat{padding:30px 26px;text-align:center}
+.bt-k{font-size:.74rem;color:var(--muted);font-family:var(--display);font-weight:600;margin-bottom:12px;text-transform:uppercase;letter-spacing:.04em}
+.bt-v{font-family:var(--display);font-weight:800;font-size:2.6rem;line-height:1;margin-bottom:10px}
+.bt-v.lime{color:var(--lime)}
+.bt-c{font-size:.82rem;color:var(--gray)}
+.bt-read{max-width:760px;margin:0 auto 30px;text-align:center;color:var(--gray);font-size:1rem;line-height:1.6}
+.bt-read strong{color:#fff;font-weight:600}
+.bt-disc{max-width:820px;margin:0 auto;display:flex;gap:12px;align-items:flex-start;padding:20px 22px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.02);font-size:.8rem;color:var(--muted);line-height:1.6}
+.bt-disc i{color:var(--lime);font-size:1.05rem;flex:none;margin-top:2px}
+.bt-disc strong{color:var(--gray);font-weight:600}
 
 /* ---------- Especialista ---------- */
 .expert-card{display:grid;grid-template-columns:320px 1fr;padding:0;overflow:hidden}
@@ -263,6 +292,10 @@ footer{border-top:1px solid var(--line);padding:48px 0 36px;background:var(--bg)
   .hero{padding:130px 0 70px}
   .sec{padding:76px 0}
   .steps{grid-template-columns:1fr}
+  .deliver-steps{grid-template-columns:1fr}
+  .bt-stats{grid-template-columns:1fr}
+  .dp-gallery{grid-template-columns:1fr;max-width:340px}
+  .dp-head h3{font-size:1.28rem}
   .price-top,.price-body{padding-left:28px;padding-right:28px}
   .price-val{font-size:3.6rem}
   .nav-cta .btn{padding:9px 16px}
