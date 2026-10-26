@@ -9,6 +9,7 @@ import { OfferSection } from './sections/OfferSection';
 import { BackstageSection } from './sections/backstage/BackstageSection';
 import { ExpertSection } from './sections/ExpertSection';
 import { CycleSection } from './sections/CycleSection';
+import { PrinciplesSection } from './sections/PrinciplesSection';
 
 export default function App() {
   const mainRef = useRef<HTMLElement>(null);
@@ -26,6 +27,7 @@ export default function App() {
         <BackstageSection />
         <ExpertSection />
         <CycleSection />
+        <PrinciplesSection />
       </main>
     </>
   );
