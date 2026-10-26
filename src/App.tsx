@@ -13,6 +13,7 @@ import { PrinciplesSection } from './sections/PrinciplesSection';
 import { PricingSection } from './sections/PricingSection';
 import { GuaranteeSection } from './sections/GuaranteeSection';
 import { FaqSection } from './sections/FaqSection';
+import { FinalCta } from './sections/FinalCta';
 
 export default function App() {
   const mainRef = useRef<HTMLElement>(null);
@@ -34,6 +35,7 @@ export default function App() {
         <PricingSection />
         <GuaranteeSection />
         <FaqSection />
+        <FinalCta />
       </main>
     </>
   );
