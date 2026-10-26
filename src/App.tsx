@@ -5,6 +5,7 @@ import { usePageMotion } from './hooks/usePageMotion';
 import { Nav } from './sections/Nav';
 import { Hero } from './sections/hero/Hero';
 import { ResultSection } from './sections/ResultSection';
+import { OfferSection } from './sections/OfferSection';
 
 export default function App() {
   const mainRef = useRef<HTMLElement>(null);
@@ -18,6 +19,7 @@ export default function App() {
       <main ref={mainRef}>
         <Hero />
         <ResultSection />
+        <OfferSection />
       </main>
     </>
   );
