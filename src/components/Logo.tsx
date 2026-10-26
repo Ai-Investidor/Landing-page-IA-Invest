@@ -2,7 +2,7 @@
 // solto no <body> do index.html original) e reutilizado via <use> em qualquer BrandLogo.
 export function LogoSymbolDefs() {
   return (
-    <svg width="0" height="0" className="symbol-defs" aria-hidden="true">
+    <svg width="0" height="0" className="absolute" aria-hidden="true">
       <symbol id="ai-logo" viewBox="0 0 1785 408">
         <path d="M782.921 1.5L648.417 406.5H515.579L650.083 1.5H782.921Z" fill="none" stroke="currentColor" strokeWidth="3" />
         <path d="M745.921 1.5L611.417 406.5H478.579L613.083 1.5H745.921Z" fill="none" stroke="currentColor" strokeWidth="3" />
@@ -15,12 +15,19 @@ export function LogoSymbolDefs() {
   );
 }
 
-export function BrandLogo({ className }: { className?: string }) {
+export function BrandLogo({ className = '' }: { className?: string }) {
   return (
-    <a href="#top" className={`brand-logo${className ? ` ${className}` : ''}`} aria-label="AI Invest">
-      <svg viewBox="0 0 1785 408">
-        <use href="#ai-logo" />
-      </svg>
+    <a href="#top" className={`block text-navy ${className}`.trim()} aria-label="AI Invest — voltar ao topo">
+      <LogoMark className="h-full" />
     </a>
+  );
+}
+
+/** Só o desenho do logo, sem link — usado dentro dos mockups da plataforma. */
+export function LogoMark({ className = '' }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 1785 408" className={`block w-auto fill-current ${className}`.trim()} aria-hidden="true">
+      <use href="#ai-logo" />
+    </svg>
   );
 }

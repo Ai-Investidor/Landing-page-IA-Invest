@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Versão final — base da identidade AI Invest.
+   Papel frio + tinta navy; verde institucional só em ação; dourado só em dado.
+   Libre Caslon Display só tem o corte 400 sem itálico: ênfase em headline vai em cor, nunca inclinada. */
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-paper font-body text-navy antialiased;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  body.nav-open {
+    overflow: hidden;
+  }
+  /* Âncoras da nav param abaixo da barra fixa */
+  section[id] {
+    scroll-margin-top: 72px;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display font-normal;
+    line-height: 1.12;
+    letter-spacing: -0.005em;
+    text-wrap: balance;
+  }
+  em {
+    font-style: normal;
+  }
+  ::selection {
+    @apply bg-emerald text-paper;
+  }
+  :focus-visible {
+    outline: 2px solid theme('colors.emerald');
+    outline-offset: 3px;
+  }
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
+}
+
+@layer components {
+  /* Contêiner da página: 1180px + 24px de respiro lateral */
+  .page {
+    @apply mx-auto w-full max-w-container px-6;
+  }
+
+  /* Palavra de ênfase dentro de headline (no navy, a variante clara — o verde base não tem contraste) */
+  .accent {
+    @apply text-emerald;
+    letter-spacing: 0.01em;
+  }
+  .accent-light {
+    @apply text-emerald-light;
+    letter-spacing: 0.01em;
+  }
+
+  /* Ritmo vertical das seções: 112px no desktop, 72px no celular */
+  .section {
+    @apply py-[72px] md:py-[112px];
+  }
+  .h2 {
+    @apply text-[clamp(1.9rem,3.4vw,2.75rem)];
+    line-height: 1.16;
+  }
+  .lead {
+    @apply text-[1.02rem] leading-[1.7] md:text-[1.06rem];
+  }
+  /* Rótulo de dado (mono, caixa alta) — usado só onde há número/registro de verdade */
+  .data-label {
+    @apply font-mono text-[.74rem] font-semibold uppercase tracking-[.08em];
+  }
+
+  /* Botões — mesmo desenho da identidade: verde sólido e ghost navy, cantos de 2px */
+  .btn {
+    @apply inline-flex items-center justify-center gap-[9px] whitespace-nowrap rounded-field border-[1.5px] border-transparent px-7 py-[15px] font-body text-[.95rem] font-semibold leading-none;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease,
+      background-color 0.2s ease,
+      color 0.2s ease,
+      border-color 0.2s ease;
+  }
+  .btn-primary {
+    @apply bg-emerald text-paper;
+    box-shadow: 0 8px 20px -12px rgba(13, 92, 63, 0.55);
+  }
+  .btn-primary:hover,
+  .btn-primary:focus-visible {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 26px -10px rgba(13, 92, 63, 0.5);
+  }
+  .btn-ghost {
+    @apply border-navy bg-transparent text-navy;
+  }
+  .btn-ghost:hover,
+  .btn-ghost:focus-visible {
+    @apply bg-navy text-paper;
+  }
+  .btn-sm {
+    @apply px-5 py-[11px] text-[.84rem];
+  }
+  .btn-lg {
+    @apply px-[42px] py-[18px] text-base;
+  }
+  .btn .arrow {
+    transition: transform 0.2s ease;
+  }
+  .btn:hover .arrow,
+  .btn:focus-visible .arrow {
+    transform: translateX(3px);
+  }
+
+  /* Cadeia 3D dos mockups: todo nível entre a moldura e a peça animada precisa preservar a profundidade */
+  .p3d {
+    transform-style: preserve-3d;
+  }
+}
