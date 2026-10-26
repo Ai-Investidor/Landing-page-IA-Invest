@@ -31,7 +31,7 @@ export function useMobileDrawer() {
       if (e.key === 'Escape' && open) closeDrawer({ restoreFocus: true });
     };
     const onResize = () => {
-      if (window.innerWidth > 680 && open) closeDrawer();
+      if (window.innerWidth >= 1024 && open) closeDrawer();
     };
     document.addEventListener('keydown', onKeydown);
     window.addEventListener('resize', onResize);
