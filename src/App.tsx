@@ -7,6 +7,7 @@ import { Hero } from './sections/hero/Hero';
 import { ResultSection } from './sections/ResultSection';
 import { OfferSection } from './sections/OfferSection';
 import { BackstageSection } from './sections/backstage/BackstageSection';
+import { ExpertSection } from './sections/ExpertSection';
 
 export default function App() {
   const mainRef = useRef<HTMLElement>(null);
@@ -22,6 +23,7 @@ export default function App() {
         <ResultSection />
         <OfferSection />
         <BackstageSection />
+        <ExpertSection />
       </main>
     </>
   );
