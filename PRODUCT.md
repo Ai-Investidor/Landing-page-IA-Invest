@@ -28,7 +28,7 @@ AI Invest is a paid subscription to a model investment portfolio, reviewed month
 
 ## Positioning
 
-"AI Invest" is a brand name only — confirmed no AI performs or assists the asset analysis; every recommendation is made and owned by a human, CEA/ANBIMA-certified specialist (Matheus Miranda). Future copy must not reintroduce a claim that AI generates or curates the portfolio.
+"AI Invest" is a brand name only — confirmed no AI performs or assists the asset analysis; every recommendation is made and owned by a human, ANBIMA-certified specialist (Matheus Miranda — CPA, C-Pro R and C-Pro I). Future copy must not reintroduce a claim that AI generates or curates the portfolio.
 
 Differentiation vs. a generic tip sheet or DIY investing: a monthly, expert-curated, ready-to-execute portfolio (not scattered tips) delivered as a formal report plus a community channel, with an explicit mechanism (dividend reinvestment / compounding) instead of promised returns, and deliberate transparency about being an early-stage company rather than inflated traction claims.
 
@@ -38,8 +38,9 @@ Central brand tension that all future work (copy and design alike) has to resolv
 
 ## Operating Context
 
-- Subscription purchased via an external payment link (Cakto); access unlocks immediately on payment.
+- Checkout: the Cakto link was removed from the pricing section on 2026-10-26; the new checkout destination is still being decided by the founders. Access unlocks immediately on payment.
 - Delivery: subscribers join an exclusive WhatsApp community where the monthly portfolio is delivered and discussed, plus a monthly PDF report (assets, weights, buy/hold/sell calls, and the thesis per asset).
+- Platform (confirmed 2026-10-26, launching): an investor web platform (Painel, Minha carteira with Composição/Movimentações/Performance, Relatórios, Carteiras, investor profile). Landing-page mockups of it use fictitious demo data and must always carry the "Dados fictícios · Demonstração" label.
 - Execution happens outside the product: the subscriber places trades themselves at any B3-registered brokerage (XP, Clear, Rico, Inter, BTG, Nubank, etc.) — the product is broker-agnostic.
 - Portfolio composition spans renda fixa, FIIs, and ações, weighted toward dividend payers plus long-term growth positions.
 
@@ -49,7 +50,7 @@ Central brand tension that all future work (copy and design alike) has to resolv
 - No guaranteed-return claims anywhere; past/simulated performance is not a guarantee of future performance.
 - Backtest/performance data (currently: +42.6% vs. IBOV +18.3% over 24 months) is **mixed-provenance**: older months in that track are a retroactive simulation (methodology backtested against public market data), while more recent months reflect real, live subscriber-portfolio performance. Future work must not present the whole series as either pure backtest or a fully real audited track record without checking which months are which. Wherever these numbers appear, they must be labeled as a retroactive simulation/backtest — never shown as an audited live track record.
 - No AI performs the asset selection or analysis today — "AI Invest" is the brand name only, not a functional claim. (See Positioning.)
-- Pricing: R$497/year, or 12x R$51.34. 7-day full-refund guarantee.
+- Pricing (updated 2026-10-26): R$ 997,86/year, shown as a Pix price. Installments (up to 12x) exist but are not shown on the page until the payment gateway is chosen, because the rate depends on it. 7-day full-refund guarantee. (The old R$497 / 12x R$51,34 is retired.)
 - Capital: the product is designed for an already-formed portfolio, not a first investment. The proposed diversification (renda fixa + FIIs + ações, income and growth positions together) assumes enough capital to spread across asset classes without disproportionate per-trade cost. No specific minimum R$ figure is confirmed — the earlier "~R$1,000" figure is retired from public copy as of 2026-08-24 (ICP update) because it undersells and misdirects the confirmed audience; do not reintroduce a specific low minimum without checking with the user first.
 
 ## Brand Commitments
@@ -57,13 +58,13 @@ Central brand tension that all future work (copy and design alike) has to resolv
 - Name: **AI Invest** (renamed from an earlier "IA Invest"; keep consistent).
 - Inline SVG wordmark/logo (recolorable via `currentColor`), Bootstrap Icons. (Typefaces are a visual-world choice — tracked in DESIGN.md, not here, since they change with the visual world and the current one no longer uses Sora/Inter.)
 - Voice: honest to the point of discomfort — sober, direct, no euphoria. Reads like an analyst who doesn't need to sell, not like a copywriter. If a line sounds excited, it's wrong.
-- Human face of the product: Matheus Miranda, Especialista de Investimentos, degree in Economia, CEA (ANBIMA) certified — his photo and certification image are real assets, not placeholders.
+- Human face of the product: Matheus Miranda, Especialista de Investimentos, degree in Economia, holds the ANBIMA certifications CPA, C-Pro R (Relacionamento) and C-Pro I (Investimento) per the ANBIMA attestation (updated 2026-10-26; earlier copy said CEA, which is retired from the page) — his photo and certification assets are real, not placeholders.
 - Instagram: @aiinvest.oficial.
 - Deliberate transparency about being an early-stage company (no inflated client counts or fabricated traction) is a stated brand value, not just current copy.
 
 ## Evidence on Hand
 
-- Real assets: specialist photo (`public/assets/matheus-miranda.jpg`), CEA/ANBIMA certification image (`public/assets/certificacao-cea-anbima.jpg`), sample monthly report PDF (`public/assets/PDF/Carteira-Dividendos-Aiinvest.pdf`), report preview screenshots (`carteira-preview-capa.png`, `-ativos.png`, `-rentabilidade.png`).
+- Real assets: specialist photo (`public/assets/matheus-miranda.jpg`), ANBIMA attestation PDF (`public/assets/PDF/certificado-anbima-matheus-miranda.pdf`, has a verification QR Code) and the badge crop made from it (`public/assets/certificacoes-anbima-selos.jpg`), sample monthly report PDF (`public/assets/PDF/Carteira-Dividendos-Aiinvest.pdf`), report preview screenshots (`carteira-preview-capa.png`, `-ativos.png`, `-rentabilidade.png`).
 - Backtest stats shown today (+42.6% cumulative vs. IBOV +18.3%; −4.1% vs. IBOV −7.2% in the down month) are real methodology output, mixed-provenance per Capabilities and Constraints above — do not present as either fully simulated or fully real without re-checking the current month split.
 - No testimonials, subscriber counts, or press mentions exist — the company is explicitly new; do not fabricate social proof of this kind.
 
@@ -74,3 +75,4 @@ Central brand tension that all future work (copy and design alike) has to resolv
 3. Honesty about early stage over borrowed credibility — no inflated numbers, no fabricated social proof; being new is framed as an advantage ("ground floor"), not hidden.
 4. Recommendations must read as directly actionable for a non-expert: buy/hold/sell plus a percentage, no unexplained jargon.
 5. Lead with mechanism (dividend reinvestment / compounding), not promised outcomes — this is how the product earns trust without overselling.
+6. No value on the page may carry a minus sign (e.g. the old −4,1% / −7,2% down-month proof is retired) — explicit user rule, 2026-10-26. Applies to copy, mockups, images and the sample PDF.
