@@ -10,6 +10,7 @@ import { BackstageSection } from './sections/backstage/BackstageSection';
 import { ExpertSection } from './sections/ExpertSection';
 import { CycleSection } from './sections/CycleSection';
 import { PrinciplesSection } from './sections/PrinciplesSection';
+import { PricingSection } from './sections/PricingSection';
 
 export default function App() {
   const mainRef = useRef<HTMLElement>(null);
@@ -28,6 +29,7 @@ export default function App() {
         <ExpertSection />
         <CycleSection />
         <PrinciplesSection />
+        <PricingSection />
       </main>
     </>
   );
