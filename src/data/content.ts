@@ -1,7 +1,18 @@
-// Toda a copy do site como dado tipado. Redesign "Research House Editorial": o mock de carteira
-// (PETR4/VALE3/MXRF11 com percentuais ilustrativos) e os 13 itens numerados espalhados em três
-// seções redundantes ("o que você recebe" + "como funciona" + "a entrega") foram removidos —
-// consolidados em `offerItems`, uma lista só, com peso real em vez de repetição.
+// Copy do site como dado tipado. Regras (ver PRODUCT.md): nenhum valor com sinal de menos,
+// nada de IA montando a carteira, simulação sempre rotulada, sem promessa de retorno.
+
+/** Preço do plano anual — à vista via Pix. Parcelamento existe, mas não aparece até o gateway ser definido. */
+export const PRICE = {
+  inteiro: '997',
+  centavos: '86',
+  completo: 'R$ 997,86',
+};
+
+/**
+ * Destino do botão de assinar. PENDENTE: a definir com o sócio (o link da Cakto foi removido).
+ * Enquanto for null, os botões levam até a seção de preço.
+ */
+export const CHECKOUT_URL: string | null = null;
 
 export interface OfferItem {
   n: string;
@@ -22,16 +33,21 @@ export const offerItems: OfferItem[] = [
   },
   {
     n: '03',
-    title: 'A entrega',
-    text: 'Assinatura confirmada, acesso liberado na hora: comunidade exclusiva no WhatsApp e relatório completo em PDF, com a tese por trás de cada escolha.',
+    title: 'A plataforma',
+    text: 'Composição, movimentações do mês e performance comparada ao CDI num só lugar, atualizados a cada competência.',
   },
   {
     n: '04',
+    title: 'O relatório e a comunidade',
+    text: 'Relatório completo em PDF, com a tese por trás de cada escolha, e acesso à comunidade exclusiva no WhatsApp.',
+  },
+  {
+    n: '05',
     title: 'A execução',
     text: 'Você aplica na sua própria corretora — qualquer uma habilitada na B3. A carteira é independente de onde você já investe.',
   },
   {
-    n: '05',
+    n: '06',
     title: 'O foco',
     text: 'Dividendos para renda recorrente hoje, valorização para patrimônio de longo prazo. Os dois ao mesmo tempo, não um ou outro.',
   },
@@ -72,7 +88,7 @@ export const cycleSteps: CycleStep[] = [
   { icon: 'bi-graph-up-arrow', title: 'Recebe ainda mais dividendos', text: 'Mais ativos pagam mais proventos.' },
 ];
 
-/** Reposicionada como declaração de princípio, não confissão — ver o brief de redesign. */
+/** Declaração de princípio, não confissão. */
 export const principleFeats: FeatListItem[] = [
   { title: 'Honestidade desde o primeiro contato', text: 'Sem números inflados, sem "milhares de clientes". Você sabe exatamente onde está pisando.' },
   { title: 'Você faz parte desde o começo', text: 'Os primeiros assinantes ajudam a moldar a carteira e o produto. Sua voz pesa mais aqui do que em qualquer lugar consolidado.' },
@@ -83,9 +99,9 @@ export const priceList: string[] = [
   'Carteira revisada e assinada todos os meses',
   'Recomendações de compra, manutenção e venda',
   'Percentual sugerido para cada ativo',
+  'Acesso à plataforma AI Invest',
   'Relatório completo em PDF + comunidade no WhatsApp',
-  'Foco em dividendos e valorização de longo prazo',
-  'Acesso imediato após a assinatura',
+  'Acesso imediato após a confirmação do pagamento',
 ];
 
 export interface FaqItemData {
@@ -97,6 +113,10 @@ export const faqItems: FaqItemData[] = [
   {
     q: 'Preciso entender de investimentos pra usar?',
     a: 'Não precisa ser especialista de mercado — é por isso que a carteira existe. Mas você não recebe uma ordem de compra sem explicação: cada recomendação vem com a tese por trás, pra você entender o raciocínio, não só executar. Basta ter conta numa corretora habilitada na B3.',
+  },
+  {
+    q: 'Como eu recebo a carteira?',
+    a: 'Assim que o pagamento é confirmado, o acesso é liberado: a carteira fica na plataforma AI Invest, com composição, movimentações e performance; o relatório completo chega em PDF; e você entra na comunidade exclusiva no WhatsApp.',
   },
   {
     q: 'Qual valor mínimo pra começar?',
@@ -113,6 +133,10 @@ export const faqItems: FaqItemData[] = [
   {
     q: 'Funciona com qualquer corretora?',
     a: 'Sim. Qualquer corretora habilitada na B3 serve — XP, Clear, Rico, Inter, BTG, Nubank, entre outras. A carteira é independente de corretora; você executa onde preferir.',
+  },
+  {
+    q: 'Como é feito o pagamento?',
+    a: `O plano anual custa ${PRICE.completo}, pago à vista via Pix. O acesso é liberado assim que o pagamento é confirmado.`,
   },
   {
     q: 'Como funciona o cancelamento?',
