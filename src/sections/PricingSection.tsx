@@ -1,7 +1,7 @@
 import { CHECKOUT_URL, PRICE, priceList } from '../data/content';
 
-// Seção 8 — Preço. R$ 997,86/ano à vista no Pix. Sem parcelamento na página (depende do gateway)
-// e sem link da Cakto: o destino do botão está em CHECKOUT_URL (pendente).
+// Seção 8 — Preço. R$ 997,00/ano à vista no Pix. Sem parcelamento na página (depende do gateway)
+// O botão abre o checkout da Yever (CHECKOUT_URL) numa nova aba.
 
 export function PricingSection() {
   const checkoutProps = CHECKOUT_URL
