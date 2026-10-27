@@ -4,15 +4,16 @@
 /** Preço do plano anual — à vista via Pix. Parcelamento existe, mas não aparece até o gateway ser definido. */
 export const PRICE = {
   inteiro: '997',
-  centavos: '86',
-  completo: 'R$ 997,86',
+  centavos: '00',
+  completo: 'R$ 997,00',
 };
 
 /**
- * Destino do botão de assinar. PENDENTE: a definir com o sócio (o link da Cakto foi removido).
- * Enquanto for null, os botões levam até a seção de preço.
+ * Destino do botão de assinar: checkout da Yever (produto "Carteira Recomendada AI Invest — Acesso por 12 meses").
+ * Se voltar a ser null, o botão leva até a seção de preço.
  */
-export const CHECKOUT_URL: string | null = null;
+export const CHECKOUT_URL: string | null =
+  'https://seguro.carteira.aiinvest.com.br/checkout/products?product_id[0]=zaUWcl7A&quantity[0]=1';
 
 export interface OfferItem {
   n: string;
